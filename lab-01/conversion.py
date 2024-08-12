@@ -1,4 +1,3 @@
-# conversion.py
 
 # Function to convert pounds to kilograms
 def pounds_to_kg(pounds):
@@ -21,7 +20,3 @@ def main():
     # Output: weight and height in the new units
     print(f"Weight in kilograms: {weight_kg:.2f} kg")
     print(f"Height in centimeters: {height_cm:.2f} cm")
-
-# Run the main function
-if __name__ == "__main__":
-    main()

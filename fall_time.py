@@ -1,3 +1,7 @@
+import math
+import constants.py
+
+
 # This script finds the time in seconds to drop from a height on some planets.
 # You have to complete/fix the code given below.
 

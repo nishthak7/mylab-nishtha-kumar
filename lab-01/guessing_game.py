@@ -1,26 +1,28 @@
-import random
+# import the 'randint' function from the random 'module'
+from random import randint
 
-def guessing_game():
-    print("Welcome to the Guessing Game!")
-    print("I'm thinking of a number between 1 and 25.")
-    
-    # Generate a random number between 1 and 25
-    target_number = random.randint(1, 25)
-    guessed_correctly = False
-    
-    # Use a while loop to allow the user to guess repeatedly
-    while not guessed_correctly:
-        guess = int(input("Enter your guess: "))
-        
-        # Provide feedback about the guess
-        if guess == target_number:
-            print("Congratulations! You guessed the number correctly!")
-            guessed_correctly = True
-        elif guess < target_number:
-            print("Too low! Try guessing a higher number.")
-        else:
-            print("Too high! Try guessing a lower number.")
+print("I'm thinking of a number between 1 and 25...")
 
-# Call the function to start the game
-guessing_game()
+# use randint() function to generate a random number between 0 and 100 and store it in a variable named 'random_number'
+random_number = randint(1, 25)
 
+# 'guesses' variable is initialized to 1, and it is used to count the number of guesses made by the user
+guesses = 1
+# ask the user to enter his guess, convert that value to integer type and store in a variable named 'guessed_number'
+guessed_number = int(input("Your guess? "))
+
+while guessed_number != random_number:
+    # if the 'random_number' is greater than the 'guessed_number'
+    if random_number > guessed_number:
+        print("It's higher.")  # display the hint
+    # if the 'random_number' is less than the 'guessed_number'
+    else:
+        print("It's lower.")  # display the hint
+
+    # ask the user to enter his guess again...
+    guessed_number = int(input("Your guess? "))
+    # increment the value of 'guesses' by 1
+    guesses += 1
+
+# display the 'guesses' value when the 'guessed_number' matches with the 'random_number'
+print("You guessed it in", guesses, "guesses!")
